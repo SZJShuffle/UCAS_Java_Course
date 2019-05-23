@@ -1,4 +1,4 @@
-# UCAS Java homwork
+# UCAS Java Course
 国科大春季选修课《Java语言程序设计》的课程记录。
 ## Lecture Notes
 [Java Lecture Notes](https://github.com/JShuffle/UCAS_Java_Homwork/tree/master/Lecture%20Notes)
