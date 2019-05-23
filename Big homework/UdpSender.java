@@ -1,4 +1,4 @@
-//package Sender;
+package Sender;
 import java.net.*;
 import java.io.*;
 import java.awt.*;
@@ -10,15 +10,15 @@ class UdpRecv implements Runnable
     private GUI gui;
     UdpRecv(DatagramSocket ds,GUI g)
     {
-        //´«ÈëÌ×½Ó×Ö¶ÔÏó
+        //ä¼ å…¥å¥—æ¥å­—å¯¹è±¡
         this.ds = ds;
-        //´«ÈëGUI¶ÔÏó
+        //ä¼ å…¥GUIå¯¹è±¡
         gui = g;
     }
     public void run()
     {   
         
-        //»ùÓÚUdpĞ­Òé½ÓÊÕÏûÏ¢
+        //åŸºäºUdpåè®®æ¥æ”¶æ¶ˆæ¯
         try
         {
             while(true)
@@ -58,7 +58,7 @@ class GUI
     }
     
     
-    //³õÊ¼»¯gui×é¼ş
+    //åˆå§‹åŒ–guiç»„ä»¶
     public void init(){
         f = new Frame("A Toy Chatter");
         but = new Button("Send");
@@ -84,10 +84,10 @@ class GUI
         
     }
     
-    //Îª×é¼şÌí¼ÓÊÂ¼ş
+    //ä¸ºç»„ä»¶æ·»åŠ äº‹ä»¶
     public void myEvent()
     {
-        //Êó±êµã»÷frame¹Ø±Õ°´Å¥¹Ø±Õ´°Ìå
+        //é¼ æ ‡ç‚¹å‡»frameå…³é—­æŒ‰é’®å…³é—­çª—ä½“
         f.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent e)
@@ -96,7 +96,7 @@ class GUI
             }          
         }); 
         
-        //Êó±êµã»÷send°´Å¥·¢ËÍÏûÏ¢
+        //é¼ æ ‡ç‚¹å‡»sendæŒ‰é’®å‘é€æ¶ˆæ¯
         but.addMouseListener(new MouseAdapter()
         {
             public void mouseClicked(MouseEvent e)
@@ -105,7 +105,7 @@ class GUI
             }
         });
         
-        //¿ì½İ¼üctrl+enter·¢ËÍÏûÏ¢
+        //å¿«æ·é”®ctrl+enterå‘é€æ¶ˆæ¯
         taInput.addKeyListener(new KeyAdapter()
         {
             public void keyPressed(KeyEvent ke)
@@ -116,7 +116,7 @@ class GUI
         });
     }
     
-    //»ùÓÚUdpĞ­Òé·¢ËÍÏûÏ¢
+    //åŸºäºUdpåè®®å‘é€æ¶ˆæ¯
     public void sendMessage()
     {
         try
@@ -132,12 +132,12 @@ class GUI
             taShow.append("\r\n");
             taShow.append("\r\n");
             
-            //¸ødgs(DatagramSocket¶ÔÏó)´«Èëtext     
+            //ç»™dgs(DatagramSocketå¯¹è±¡)ä¼ å…¥text     
             try
             {   
                 byte[] data = text.getBytes();
                 
-                //Ö¸¶¨½ÓÊÕ·½IPÎª±¾µØIP,¶Ë¿ÚÎª8999
+                //æŒ‡å®šæ¥æ”¶æ–¹IPä¸ºæœ¬åœ°IP,ç«¯å£ä¸º8999
                 DatagramPacket dp = new DatagramPacket(data,data.length,InetAddress.getByName("127.0.0.1"),8999);
                 
                 dgs.send(dp);       
@@ -157,10 +157,10 @@ class UdpSender
 {
      public static void main(String[] args)throws Exception
      {
-            //Ö¸¶¨±¾³ÌĞòÕ¼ÓÃµÄ¶Ë¿ÚÎª6999
+            //æŒ‡å®šæœ¬ç¨‹åºå ç”¨çš„ç«¯å£ä¸º6999
             DatagramSocket ds = new DatagramSocket(6999);
             GUI gui = new GUI(ds);
-            //¿ªÆôÒ»¸ö×ÓÏß³ÌÓÃÓÚ½ÓÊÕÊı¾İ
+            //å¼€å¯ä¸€ä¸ªå­çº¿ç¨‹ç”¨äºæ¥æ”¶æ•°æ®
             UdpRecv udpr = new UdpRecv(ds,gui);
             Thread t = new Thread(udpr);
             t.start();   
