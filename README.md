@@ -4,7 +4,7 @@
 [Java Lecture Notes](https://github.com/JShuffle/UCAS_Java_Homwork/tree/master/Lecture%20Notes)
 
 仅供私下学习使用。
-## homwork
+## Homwork
 ### HW1
 面向对象程序设计的基本知识。
 ### HW2
