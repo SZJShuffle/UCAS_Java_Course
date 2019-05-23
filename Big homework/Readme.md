@@ -3,7 +3,7 @@ UdpSender.java为发送方源码
 
 UdpReceiver.java为接收方源码
 
-分别打包成了Sender和Receiver包。包内有.class文件。
+分别打包成Sender和Receiver包。
 ## 演示
 
 聊天窗口界面：
