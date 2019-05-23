@@ -1,12 +1,17 @@
 # UCAS Java homwork
-国科大春季选修课《Java语言程序设计》的作业记录。
-## HW1
+国科大春季选修课《Java语言程序设计》的课程记录。
+## Lecture Notes
+[Java Lecture Notes](https://github.com/JShuffle/UCAS_Java_Homwork/tree/master/Lecture%20Notes)
+
+仅供私下学习使用。
+## homwork
+### HW1
 面向对象程序设计的基本知识。
-## HW2
+### HW2
 解析XML格式文件。
-## HW3
+### HW3
 多线程编程基础知识。
-## Big HW
+### Big HW
 编写一款简单的聊天软件。
 
 思路：
